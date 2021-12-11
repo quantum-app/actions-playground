@@ -1,0 +1,15 @@
+name: Deploy Service B
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+
+jobs:
+  example_job:
+    name: Deploy Service B
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - run: echo "Deployed Service B"
