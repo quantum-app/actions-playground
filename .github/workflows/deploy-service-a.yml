@@ -3,6 +3,8 @@ name: Deploy Service A
 on:
   push:
     branches: [main]
+  workflow_dispatch
+
 
 jobs:
   example_job:
