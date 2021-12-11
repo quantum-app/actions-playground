@@ -1,0 +1,13 @@
+name: Deploy Service A
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  example_job:
+    name: Deploy Service A
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - run: echo "Deployed Service A"
