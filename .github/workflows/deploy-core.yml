@@ -12,6 +12,7 @@ on:
         description: 'Deploy Consumer'
         type: boolean
         required: false
+        default: true
     secrets:
       token:
         required: true
