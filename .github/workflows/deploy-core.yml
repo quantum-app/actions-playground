@@ -13,6 +13,10 @@ on:
         type: boolean
         required: false
         default: true
+      environment:
+        description: 'Environment'
+        type: string
+        default: 'development:core'
     secrets:
       token:
         required: true
