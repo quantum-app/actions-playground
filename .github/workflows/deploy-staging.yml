@@ -9,6 +9,6 @@ jobs:
   call-workflow:
     uses: quantum-app/actions-playground/.github/workflows/deploy-core.yml@main
     with:
-      environment: 'staging:core'
+      environment: 'production:core'
     secrets:
       token: ${{ secrets.TOKEN }}
