@@ -16,6 +16,7 @@ on:
       environment:
         description: 'Environment'
         type: string
+        required: false
         default: 'development:core'
     secrets:
       token:
@@ -27,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
-      - run: echo ${{ inputs.api }} ${{ inputs.consumer }}
+      - run: echo ${{ inputs.api }} ${{ inputs.consumer }} ${{ inputs.environment }}
 #      - uses: ./.github/actions/my-action@v1
 #        with:
 #          username: ${{ inputs.username }}
