@@ -10,5 +10,7 @@ jobs:
     uses: quantum-app/actions-playground/.github/workflows/deploy-core.yml@main
     with:
       environment: 'production:core'
+      api: true
+      consumer: true
     secrets:
       token: ${{ secrets.TOKEN }}
