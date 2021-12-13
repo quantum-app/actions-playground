@@ -21,6 +21,7 @@ jobs:
   example_job:
     name: Deploy Core
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     steps:
       - run: echo ${{ inputs.api }} ${{ inputs.consumer }}
 #      - uses: ./.github/actions/my-action@v1
