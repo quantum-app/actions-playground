@@ -10,6 +10,6 @@ jobs:
   example_job:
     name: Deploy Service A
     runs-on: ubuntu-latest
-    environment: dev:core:order-queue-consumer
+    environment: development:core
     steps:
-      - run: echo "Deployed Development Core Order Queue Consumer"
+      - run: echo "Deployed Development Core"

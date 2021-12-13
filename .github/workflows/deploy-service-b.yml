@@ -10,6 +10,6 @@ jobs:
   example_job:
     name: Deploy Service B
     runs-on: ubuntu-latest
-    environment: dev:core:api
+    environment: staging:core
     steps:
-      - run: echo "Deployed Development Core API"
+      - run: echo "Deployed Staging Core"
