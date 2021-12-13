@@ -1,0 +1,28 @@
+name: Deploy Core
+
+on:
+  workflow_call:
+    inputs:
+      api:
+        description: 'Deploy API'
+        required: true
+        type: boolean
+        default: true
+      consumer:
+        description: 'Deploy Consumer'
+        type: boolean
+        required: true
+    secrets:
+      token:
+        required: true
+
+jobs:
+  example_job:
+    name: Deploy Core
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.api }} ${{ inputs.consumer }}
+#      - uses: ./.github/actions/my-action@v1
+#        with:
+#          username: ${{ inputs.username }}
+#          token: ${{ secrets.token }}

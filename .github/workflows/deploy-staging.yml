@@ -1,0 +1,11 @@
+name: Call a reusable workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  call-workflow:
+    uses: quantum-app/actions-playground/.github/workflows/deploy-core.yml@main
+    secrets:
+      token: ${{ secrets.TOKEN }}

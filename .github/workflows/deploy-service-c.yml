@@ -11,5 +11,6 @@ jobs:
     name: Deploy Service C
     runs-on: ubuntu-latest
     environment: production:core
+
     steps:
       - run: echo "Deployed Production Core"
