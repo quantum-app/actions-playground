@@ -1,0 +1,15 @@
+name: Deploy Service C
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+
+jobs:
+  example_job:
+    name: Deploy Service C
+    runs-on: ubuntu-latest
+    environment: production:core
+    steps:
+      - run: echo "Deployed Production Core"
