@@ -5,14 +5,12 @@ on:
     inputs:
       api:
         description: 'Deploy API'
-        required: false
+        required: true
         type: boolean
-        default: true
       consumer:
         description: 'Deploy Consumer'
         type: boolean
-        required: false
-        default: true
+        required: true
       environment:
         description: 'Environment'
         type: string
