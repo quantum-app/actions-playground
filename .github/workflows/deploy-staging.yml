@@ -1,4 +1,4 @@
-name: Deploy Staging Core
+name: Deploy Core
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow:
+  production:
     uses: quantum-app/actions-playground/.github/workflows/deploy-core.yml@main
     with:
       environment: 'production:core'
