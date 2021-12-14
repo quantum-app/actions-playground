@@ -24,7 +24,7 @@ jobs:
       - run: echo $((1 + $RANDOM % 10)) > random.txt
       - uses: EndBug/add-and-commit@v7
         with:
-          author_name: ${{ github.event.head_commit.author.name }} [Github Actions]
+          author_name: ${{ github.event.head_commit.author.name }} [bot]
           author_email: ${{ github.event.head_commit.author.email }}
           message: "${{ github.event.head_commit.message }} \n\n* 📦 Version bump [skip actions]"
           add: '["random.txt"]'
