@@ -2,7 +2,7 @@ name: Deploy Core
 
 on:
   push:
-    branches: [main]
+    branches: [other]
   workflow_dispatch:
 
 jobs:
