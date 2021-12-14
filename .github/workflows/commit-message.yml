@@ -24,8 +24,8 @@ jobs:
       - run: echo $((1 + $RANDOM % 10)) > random.txt
       - id: commit_message
         run: |
-        COMMIT_MESSAGE="${{ github.event.head_commit.message }}\n* 📦 Version bump [skip actions]"
-        echo "::set-output name=commit_message::$COMMIT_MESSAGE"
+          COMMIT_MESSAGE="${{ github.event.head_commit.message }}\n* 📦 Version bump [skip actions]"
+          echo "::set-output name=commit_message::$COMMIT_MESSAGE"
       - run: echo ${{ steps.commit_message.outputs.commit_message }}
       - uses: EndBug/add-and-commit@v7
         with:
