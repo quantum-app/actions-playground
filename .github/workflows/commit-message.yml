@@ -21,14 +21,14 @@ jobs:
           # Use an admin token to push directly to master
           token: ${{ secrets.GH_COMMIT_TOKEN }}
 
-      - run: export COMMIT_MESSAGE='${{ github.event.head_commit.message }} [skip actions]'
-      - run: echo $COMMIT_MESSAGE
+#      - run: export COMMIT_MESSAGE='${{ github.event.head_commit.message }} [skip actions]'
+#      - run: echo $COMMIT_MESSAGE
 
-#      - run: echo $((1 + $RANDOM % 10)) > random.txt
-#
-#      - uses: EndBug/add-and-commit@v7
-#        with:
-#          author_name: github-actions
-#          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-#          message: 🚀 Apply version bumps [skip actions]
-#          add: '["random.txt"]'
+      - run: echo $((1 + $RANDOM % 10)) > random.txt
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          message: '🚀 ${{ github.event.head_commit.message }} [skip actions]'
+          add: '["random.txt"]'
