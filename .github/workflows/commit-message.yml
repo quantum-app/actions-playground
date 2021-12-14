@@ -27,5 +27,5 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          message: '${{ github.event.head_commit.message }} [skip actions]'
+          message: '${{ github.event.head_commit.message }} \n 📦 Version bump [skip actions]'
           add: '["random.txt"]'
