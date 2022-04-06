@@ -2,7 +2,7 @@ name: Commit message
 
 on:
   push:
-    branches: [main]
+    branches: [other2]
   workflow_dispatch:
 
 jobs:
